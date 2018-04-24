@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[11]:
+# In[1]:
 
 
 import csv
@@ -27,7 +27,7 @@ def main(filename):
     with open('wordcount.csv','w') as csv_file:
         writer = csv.writer(csv_file,delimiter = ',')
         writer.writerow(['word', 'count'])
-        writer.writerow(counter.most_common())
+        writer.writerows(counter.most_common())
    
     with open('wordcount.json','w') as json_file:
         json.dump(counter,json_file)
