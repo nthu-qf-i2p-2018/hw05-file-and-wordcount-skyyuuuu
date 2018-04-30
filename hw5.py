@@ -6,8 +6,12 @@
 
 import csv
 import json
-import pickle
 import string
+import pickle
+
+
+# In[ ]:
+
 
 def main(filename):
     txtfile = open(filename)
@@ -36,6 +40,9 @@ def main(filename):
     with open('wordcount.pkl','wb') as pkl_file:
         pickle.dump(counter,pkl_file)
     
+
+
+# In[ ]:
 
 
 if __name__ == '__main__':
