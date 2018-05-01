@@ -22,13 +22,13 @@ def main(filename):
         words = line.split()
         for word in words:
             word = word.strip(string.punctuation)
-            if word != (' '):
+            if word != (''):
                 all_words.append(word)
 
     from collections import Counter
     counter = Counter (all_words)
    
-    with open('wordcount.csv','w') as csv_file:
+    with open('wordcount.csv','w',newlines ='') as csv_file:
         writer = csv.writer(csv_file,delimiter = ',')
         writer.writerow(['word', 'count'])
         writer.writerows(counter.most_common())
